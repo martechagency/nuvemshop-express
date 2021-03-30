@@ -9,4 +9,4 @@ Express server used to handle Nuvemshop Webhooks created with the Nuvemshop API
 3. Server will run in http://localhost:3000
 4. You can now make POST requests to http://localhost:3000/teste
 5. Headers: {Content-Type: application/json}
-6. Body: {"id": 123, "name": "chosen-name"}
+6. Example body: {"id": 123, "name": "chosen-name"}
