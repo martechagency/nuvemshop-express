@@ -12,16 +12,15 @@ app.get('/', (req, res) => {
   res.send('Pedidos pagos...')
 })
 
-app.post('/teste', (req, res) => {
+app.post('/orders', (req, res) => {
     res.setHeader('Content-Type', 'application/json');
 
     res.send(JSON.stringify({
-        id: req.body.id || null,
-        name: req.body.name || null,
-        created_at: d || null
+        id: req.body.id || null, // id do pedido
+        payment_date: d || null
     }));
 
-    console.log(`ID: ${req.body.id}, NAME: ${req.body.name}`)
+    console.log(`ID: ${req.body.id}`)
 
     if(req.body.id !== undefined && req.body.id !== null){
         console.log('Chama a funcao da esteniografia')
@@ -29,5 +28,5 @@ app.post('/teste', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Listening at http://localhost:${port}`)
 })
